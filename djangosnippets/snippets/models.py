@@ -6,7 +6,7 @@ class Snippet(models.Model):
     title = models.CharField('タイトル', max_length=128)
     code = models.TextField('コード', blank=True)
     description = models.TextField('説明', blank=True)
-    create_by = models.ForeignKey(settings.AUTH_USER_MODEL,
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL,
                                   verbose_name="投稿者",
                                   on_delete=models.CASCADE)
     create_at = models.DateTimeField("投稿日", auto_now_add=True)
